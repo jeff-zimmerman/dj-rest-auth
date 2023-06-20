@@ -112,6 +112,7 @@ class RegisterView(CreateAPIView):
         elif data:
             response = Response(
                 data,
+                status=status.HTTP_201_CREATED,
                 headers=headers,
             )
         else:
